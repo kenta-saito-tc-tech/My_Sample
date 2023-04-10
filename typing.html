@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>タイピングゲーム</title>
+    <link rel="stylesheet" href="typing.css">
+</head>
+
+<body>
+    <div class="subBody">
+        <h1>タイピングゲーム</h1>
+        <button type="submit" id="startBtn">スタート</button>
+        <p id="random-string"></p> <!-- ランダムな文字列を出力する要素 -->
+        <script>
+            'use strict';
+            let characters = ['white', 'red', 'black', 'green', 'yellow'];
+            let randomString = ''; // 空の文字列を用意する
+            let randomInt = Math.floor(Math.random() * characters.length); //ランダムな数字を出す
+            let arr = characters[randomInt].split(""); // 文字列を配列に変換する
+
+            // ランダムな文字列を生成する
+            for (let i = 0; i < arr.length; i++) {
+                document.write(arr[i]);
+                //document.getElementById('random-string').innerHTML = arr[i]; // ランダムな文字列を出力する
+            }
+        </script>
+        <form>
+            <input type="text" id="userText" name="userText">
+        </form>
+        <script>
+            'use strict';
+            var userText = document.getElementById("userText").value;
+            while (true) {
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] === "userText") {
+                        alert("Welcome JohnDoe!");
+                    } else {
+                        alert("Incorrect username. Please try again.");
+                    }
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>
